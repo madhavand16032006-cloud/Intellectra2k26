@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-dark: #040816;
+    --card-dark: #070D22;
+    --neon-cyan: #00F0FF;
+    --neon-blue: #38BDF8;
+    --neon-purple: #A855F7;
+    --neon-pink: #EC4899;
+    --neon-green: #00FF66;
+    --neon-emerald: #10B981;
+    --gold-accent: #F59E0B;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #F1F5F9;
+    background-color: #030716;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Syne', 'Plus Jakarta Sans', sans-serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Glassmorphism utilities */
+.glass-panel {
+  background: rgba(8, 14, 30, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.glass-dark {
+  background: rgba(6, 10, 22, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+}
+
+/* Hover glow & cyber effects */
+.hover-glow {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hover-glow:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -10px rgba(0, 240, 255, 0.3), 0 0 24px 2px rgba(0, 240, 255, 0.2);
+  border-color: rgba(0, 240, 255, 0.6);
+}
+
+/* Cyber Cockpit Navbar Frame */
+.cockpit-nav-border {
+  position: relative;
+  background: linear-gradient(180deg, rgba(6, 13, 34, 0.95) 0%, rgba(4, 9, 24, 0.98) 100%);
+  border: 1px solid rgba(0, 240, 255, 0.35);
+  box-shadow: 
+    0 0 20px rgba(0, 240, 255, 0.15),
+    inset 0 0 15px rgba(0, 240, 255, 0.08);
+  border-radius: 20px;
+}
+
+/* Hexagonal/Chamfered Date-Time Badge matching screenshot */
+.hex-chamfer-badge {
+  position: relative;
+  background: linear-gradient(135deg, rgba(3, 12, 36, 0.92) 0%, rgba(10, 18, 48, 0.88) 100%);
+  border-radius: 9999px;
+  border: 1.5px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 
+    0 0 25px rgba(0, 240, 255, 0.3),
+    0 0 40px rgba(168, 85, 247, 0.2);
+}
+
+.hex-chamfer-border {
+  position: relative;
+  padding: 1.5px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #00F0FF 0%, #3B82F6 40%, #A855F7 80%, #EC4899 100%);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.4), 0 0 35px rgba(168, 85, 247, 0.3);
+}
+
+/* Metallic Cyber Title */
+.cyber-metallic-text {
+  background: linear-gradient(180deg, #FFFFFF 0%, #C4EEFF 35%, #38BDF8 70%, #0284C7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 25px rgba(0, 240, 255, 0.5));
+}
+
+.cyber-magenta-text {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F5D0FE 30%, #D946EF 70%, #A855F7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 25px rgba(217, 70, 239, 0.5));
+}
+
+/* Floating Silk Nebula Waves */
+@keyframes waveFloatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-15px) rotate(1deg) scale(1.03);
+    opacity: 0.9;
+  }
+}
+
+.animate-wave-silk {
+  animation: waveFloatSlow 8s ease-in-out infinite;
+}
+
+/* Grid pattern */
+.bg-grid-pattern {
+  background-size: 36px 36px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 240, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.06) 1px, transparent 1px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #030716;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00F0FF;
+}

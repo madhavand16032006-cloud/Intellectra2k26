@@ -1,0 +1,8 @@
+{
+  "name": "INTELLECTRA 2026 - Technical Symposium",
+  "description": "National Level Technical Symposium by Department of Information Technology, Adhiparasakthi Engineering College, Melmaruvathur.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
